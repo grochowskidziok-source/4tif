@@ -43,7 +43,7 @@
         Wybierz Zdjęcia/Filmiki ->
     </div>
     <div id="glowa">
-        <form id="formularz">
+        
         <select name="os" id="os">
             <option value="1">Sygnar</option>
             <option value="2">Młoda Maciora</option>
@@ -55,20 +55,23 @@
             <option value="8">Szymelek</option>
             <option value="9">Adaś</option>
         </select>
-    <button type="button" id="kuzik" onclick="zrob()"></form>
+    <button type="button" id="kuzik" onclick="zrob()">
     </div>
     <div id="glowa"></div>
     <div id="wazny">
     <script>
         function zrob(){
-            var osoba = document.getElementById("os").value;
-            
+           var osoba = document.getElementById("os").value;
+
+            document.write("Wybrałes: "+osoba);
             if (osoba == "1") {
                 document.write("1. <img src='syg.png'>");
             } else if (osoba == "2") {
                 document.write("2. <img src='dawid.jpg'>");
             }
         }
+            
+        
     </script>
 
     </div>
