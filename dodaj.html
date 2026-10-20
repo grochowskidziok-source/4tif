@@ -63,7 +63,12 @@
         function zrob(){
            var osoba = document.getElementById("os").value;
 
-            wynik.innerHTML="Wybrales"+osoba;
+            if (osoba == "1") {
+                wynik.innerHTML="1. <img src='syg.png' width='150px' height='200px'>";
+            } else if (osoba == "2") {
+                wynik.innerHTML="2. <img src='dawid.jpg' width='150px' height='200px'>";
+            }
+            
             
         }
             
