@@ -55,21 +55,20 @@
             <option value="8">Szymelek</option>
             <option value="9">Adaś</option>
         </select>
-    <input type="submit" value="POKAŻ"></form>
+    <button type="button" id="kuzik" onclick="zrob()"></form>
     </div>
     <div id="glowa"></div>
     <div id="wazny">
     <script>
-        document.getElementById('formularz').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            var osoba = document.getElementById('os').value;
+        function zrob(){
+            var osoba = document.getElementById("os").value;
             
             if (osoba == "1") {
                 document.write("1. <img src='syg.png'>");
             } else if (osoba == "2") {
                 document.write("2. <img src='dawid.jpg'>");
             }
+        }
     </script>
 
     </div>
