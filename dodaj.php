@@ -43,7 +43,7 @@
         Wybierz Zdjęcia/Filmiki ->
     </div>
     <div id="glowa">
-        <form method="POST">
+        <form id="formularz">
         <select name="os">
             <option value="1">Sygnar</option>
             <option value="2">Młoda Maciora</option>
@@ -59,18 +59,19 @@
     </div>
     <div id="glowa"></div>
     <div id="wazny">
-    <?php 
-    @$osoba=$_POST['os'];
-    if ($osoba=="1"){
-        echo "1.<img src='syg.png'>";
-    } else if ($osoba=="2"){
-        echo "2.<img src='dawid.jpg'>";
-
-    }
-        
-        
-        
-    ?>
+    <script>
+        document.getElementById('formularz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var osoba = document.getElementById('os').value;
+            
+            if (osoba == "1") {
+                document.write("1. <img src='syg.png'>");
+            } else if (osoba == "2") {
+                document.write("2. <img src='dawid.jpg'>");
+            }
+        });
+    </script>
 
     </div>
     <div id="wazny1">
