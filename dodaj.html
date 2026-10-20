@@ -43,24 +43,40 @@
         Wybierz Zdjęcia/Filmiki ->
     </div>
     <div id="glowa">
-        <select name="osoba">
+        <form id="formularz">
+        <select name="os">
             <option value="1">Sygnar</option>
             <option value="2">Młoda Maciora</option>
             <option value="3">Kluseczka</option>
-            <option value="4"></option>>Banek</option>
-            <option value="5"></option>>Krzystof</option>
-            <option value="6"></option>>Noga</option>
-            <option value="7"></option>>Maciora</option>
-            <option value="8"> </option>>Szymelek</option>
-            <option value="9"></optionvalue>>Adaś</option>
+            <option value="4">Banek</option>
+            <option value="5">Krzystof</option>
+            <option value="6">Noga</option>
+            <option value="7">Maciora</option>
+            <option value="8">Szymelek</option>
+            <option value="9">Adaś</option>
         </select>
+    <input type="submit" value="POKAŻ"></form>
     </div>
     <div id="glowa"></div>
     <div id="wazny">
+    <script>
+        document.getElementById('formularz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var osoba = document.getElementById('os').value;
+            
+            if (osoba == "1") {
+                document.write("1. <img src='syg.png'>");
+            } else if (osoba == "2") {
+                document.write("2. <img src='dawid.jpg'>");
+            }
+        });
+    </script>
+
     </div>
     <div id="wazny1">
         <form method="POST">
-            <input type="submit" value="POKAŻ">
+            
 
         </form>
     </div>
